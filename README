@@ -1,0 +1,21 @@
+500px Machine Learning Engineer Intern - Tech Challenge
+
+Purpose
+
+This technical challenge is for candidates to demonstrate their problem solving and learning abilities. All tasks in this challenge are based on real life examples of what you could work on at 500px. There’s no right or wrong way to do this challenge, so don’t stress out too much about it. The purpose is to facilitate a conversation about machine learning and best practices. We want to see how you think and what your opinions are.
+
+
+The challenge
+
+TL;DR: Create adversarial images to fool a MNIST classifier in TensorFlow.
+Deep convolutional neural networks (CNN) are state of the art models for image classification and object detection. Such models play crucial role at 500px where we use them for many applications like automatic keywording, people detection and image search. It’s important to understand how they work and what their limitations are.
+
+Here are the steps you should go through:
+Read the Ground Rules!
+Learn how adversarial examples are created. For example, “Breaking Linear Classifiers on ImageNet” gives a good overview on the subject.
+Install Tensorflow
+Follow “Deep MNIST for Experts” tutorial to get the MNIST classifier running.
+Expand the code from the previous step to generate adversarial images. Specifically, pick 10 images of digit ‘2’ which are correctly classified as ‘2’ by the trained model and modify them so the network incorrectly classifies them as 6.
+Generate adversarial examples and save them as a single image containing a grid of 10 rows and 3 columns. The rows correspond to the selected examples of ‘2’. The columns are original image, delta and adversarial image. Provide link to the resulting image.
+Make your code clean and readable. Add comments where needed.
+Analyze your results. What interesting insights did you learn? This step is specifically left open ended so we could have interesting conversation when we meet in person.

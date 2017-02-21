@@ -4,7 +4,6 @@ mnist = input_data.read_data_sets('MNIST_data', one_hot=True) # This is our trai
 
 import tensorflow as tf
 sess = tf.InteractiveSession()
-saver = tf.train.Saver()
 
 # Note: the following are placeholders for a tensor that will be constantly fed
 x = tf.placeholder(tf.float32, shape=[None, 784]) # Feature tensor = 28x28
@@ -13,7 +12,8 @@ y_ = tf.placeholder(tf.float32, shape=[None, 10]) # Class actual (0..9) 1-hot en
 W = tf.Variable(tf.zeros([784,10])) # Weights
 b = tf.Variable(tf.zeros([10]))     # Biases
 
-sess.run(tf.initialize_all_variables())
+sess.run(tf.global_variables_initializer())
+saver = tf.train.Saver()
 
 # Model
 y = tf.matmul(x,W) + b
@@ -37,5 +37,5 @@ accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 print("Accuracy: ", accuracy.eval(feed_dict={x: mnist.test.images, y_: mnist.test.labels}))
 
 #Model saving
-save_path = saver.save(sess, "linear_model.ckpt")
+save_path = saver.save(sess, "linear_model/linear_model.ckpt")
 print ("Model saved as: ", save_path)

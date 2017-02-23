@@ -160,6 +160,8 @@ def breed_adversary (t_img, session, n):
 count = 0
 
 while count < 10:
+    # Iterates through MNIST set, if it finds an image that is actually and classified as 2, it passes it to
+    # the adversary generating script
     batch = mnist.test.next_batch(1)
     image = batch[0]
     y_ = batch[1]

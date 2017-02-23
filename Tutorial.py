@@ -1,4 +1,6 @@
-#Import training data
+# MNIST training linear example from: https://www.tensorflow.org/get_started/mnist/pros
+
+# Import training data
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets('MNIST_data', one_hot=True) # This is our training data
 
@@ -23,7 +25,6 @@ cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=y,
 
 # Calculates next step by gradient descent
 train_step = tf.train.GradientDescentOptimizer(0.5).minimize(cross_entropy)
-# Pretty cool that tensorflow updates the parameters for you, very streamlined
 
 #Training
 for i in range(1000):

@@ -7,13 +7,7 @@ These model parameters were imported into Linear_Generate_AdversaryEA.py, which 
 http://www.evolvingai.org/files/DNNsEasilyFooled_cvpr15.pdf
 http://dl.acm.org/citation.cfm?id=2955178
 
-) to generate adversarial images against the previously trained model. Specifically it turns other class images into class 6. I didn't train a convnet because my computer's kind of weak and I was trying to get this done quickly (you didn't post an end date). However, I purposely avoided basing my approach around "hacking" the linear model parameters because I wanted a versatile algorithm that can also attack a blackbox model.
-
-I tried stochastic search at first, but all my solutions kept annealing to a grey box that fooled the model to a great degree, but looked nothing like the source image. That's when I found the above papers and went that route. It's my first time implementing a genetic algorithm, and I know it can be more effective than what I've demonstrated here, but I only gave it 1000 generations (for time) and I'm not really happy with this fitness algorithm, it's too finicky.
-
-Challenge.py addresses the challenge, but it's basically the previous script on loop. Recommend you run the above if you just want a demo. Results will be uploaded in a results folder.
-
-All code is written by myself. I only used "standard" libraries.
+) to generate adversarial images against the previously trained model. Specifically it turns other class images into class 6.
 
 
 

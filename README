@@ -1,4 +1,4 @@
-In Tutorial.py, A linear single layer neuronetwork model was trained based on the Tensorflow MNIST tutorial:
+In Tutorial.py, a linear single layer neuronetwork model was trained based on the Tensorflow MNIST tutorial:
   
 https://www.tensorflow.org/get_started/mnist/pros
   
